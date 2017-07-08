@@ -1,0 +1,9 @@
+a{
+  color: black;
+}
+div a img:hover {
+  opacity: .5;
+}
+a:hover{
+  text-decoration: none;
+}
