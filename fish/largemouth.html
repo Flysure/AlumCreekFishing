@@ -1,6 +1,13 @@
  <html><head><link rel='stylesheet' href='../css/bootstrap.css'>
+      <link rel='stylesheet' href='../css/fishcss.css'>
       <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
       <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+
+      <script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="billboard/billboard.js"></script>
+<link rel="stylesheet" href="billboard/billboard.css">
+
       <meta charset='utf-8'>
       <title> largemouth </title>
     </head>
@@ -9,6 +16,24 @@
 
       <br>
       <div class='container'>
+      <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+        <a class="navbar-brand" href="../index.html">AlumCreek Fishing</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="../index.html">Home</a></li>
+        </ul>
+
+      </div>
+    </div>
+  </nav>
         <div class='row'>
           <div class='col-lg-6 col-md-6 col-sm-6 col-xs-12'>
             <h3><i>Micropterus salmoides</i></h3>
@@ -28,34 +53,89 @@
 
             </div>
           </div>
-        <div class='row'>
-          <div class='col-lg-9 col-md-9 col-sm-12 col-xs-12'>
-            <p class='text-muted' style=font-size:20px>&nbsp;&nbsp;&nbsp;Adult largemouth bass are solitary fish, although occasionally several bass will congregate in areas with abundant food supplies. They are usually the apex predator in their habitat. They will hide between rocks, among water vegetation, or under roots and limbs of sunken trees, striking at their prey from the shadows. Bass prefer quiet, calm, and warm water but are very adaptable to other conditions. They are found in rivers, lakes, ponds, reservoirs, and steams.</p>
-          </div>
-          <div class='col-lg-3 col-md-3 col-sm-0 col-xs-0'>
-            <img src='http://i.imgur.com/l4IKb7r.jpg' class='img-responsive'>
+        <div class="panel-group" id="accordion">
+        <div class="panel panel-default">
+<div class="panel-heading">
+  <h4 class="panel-title">
+<a data-toggle="collapse" href="#collapse">
+At a glance</a>
+</h4>
+</div>
+<div id="collapse" class="panel-collapse collapse in">
+  <div class="panel-body">
+    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+      <p hidden id="num">50</p>
+        <h4>Difficulty</h4>
+  <div id="chart">
+
+
+  </div>
+  <script type="text/javascript" src="graph.js"></script>
+    </div>
+      <div class="col-lg-1 col-md-1 col-sm-2 col-xs-4">
+      <p id="baits">common baits:</p>
+    </div>
+  <div class="col-lg-1 col-md-1 col-sm-2 col-xs-4">
+    <img src="pics/minnow.jpg" width:40px; height="40px" vspace="30">
+    <p><i>minnow</i></p>
+  </div>
+  <div class="col-lg-1 col-lg-offset-1 col-md-1 col-sm-2 col-xs-4">
+    <img src="pics/worm.jpg" width:40px; height="40px" vspace="30">
+      <p><i>worm</i></p>
+  </div>
+  <div class="col-lg-1 col-lg-offset-1 col-md-1 col-sm-2 col-xs-4">
+    <img src="pics/wax-worm.jpg" width:40px; height="40px" vspace="30">
+      <p><i>waxworm</i></p>
+  </div>
+  <div class="col-lg-1 col-lg-offset-1 col-md-1 col-sm-2 col-xs-4">
+    <img src="pics/tubejig.jpg" width:40px; height="40px" vspace="30">
+      <p><i>tubejig</i></p>
+  </div>
+  </div>
+</div>
+</div>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+        <a data-toggle="collapse" href="#collapse1">
+        Description</a>
+      </h4>
+        </div>
+        <div id="collapse1" class="panel-collapse collapse in">
+          <div class="panel-body">
+            <p class='text-muted' style=font-size:20px>&nbsp;&nbsp;&nbsp;Adult largemouth bass are solitary fish, although occasionally several bass will congregate in areas with abundant food supplies. They are usually the apex predator in their habitat. They will hide between rocks, among water vegetation, or under roots and limbs of sunken trees, striking at their prey from the shadows. Bass prefer quiet, calm, and warm water but are very adaptable to other conditions. They are found in rivers, lakes, ponds, reservoirs, and steams.
+            </p>
           </div>
         </div>
-        <div class='row'>
-          <div class='col-lg-12 col-md-12 col-sm-12 col-xs-12'>
-            <button data-toggle='collapse' data-target='#demo'>Fishing Info</button>
-            <div id='demo' class='collapse'>
-              <ul class='list-group'>
-                <li class='list-group-item'>Difficulty to catch <span class='badge'>Medium</span></li>
-                <li class='list-group-item'>Shore vs Boat <span class='badge'>shore</span></li>
-                <li class='list-group-item'>School <span class='badge'>10-20 fish</span></li>
-                <li class='list-group-item'>Best time of day <span class='badge'>springtime</span></li>
-                <li class='list-group-item'>Rarity<span class='badge'>common</span></li>
-                <li class='list-group-item'>Hook size <span class='badge'>#8-#12</span></li>
-                <li class='list-group-item'>Aggressiveness<span class='badge'>Medium+</span></li>
-                <li class='list-group-item'>Water Environment <span class='badge'>clear, calm water</span></li>
-      </ul>
-          </div>
+      </div>
+
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+        <a data-toggle="collapse"  href="#collapse3">
+        Fishing info</a>
+      </h4>
+        </div>
+        <div id="collapse3" class="panel-collapse collapse">
+          <div class="panel-body">
+            <ul class='list-group'>
+             
+              <li class='list-group-item'>Shore vs Boat <span class='badge'>shore</span></li>
+              <li class='list-group-item'>School <span class='badge'>10-20 fish</span></li>
+              <li class='list-group-item'>Best time of day <span class='badge'>springtime</span></li>
+              <li class='list-group-item'>Rarity<span class='badge'>common</span></li>
+              <li class='list-group-item'>Hook size <span class='badge'>#8-#12</span></li>
+              <li class='list-group-item'>Aggressiveness<span class='badge'>Medium</span></li>
+              <li class='list-group-item'>Water Environment <span class='badge'>clear, calm water</span></li>
+            </ul>
           </div>
         </div>
+      </div>
+    </div>
 
     </div>
 
     </body>
 
     </html>
+    

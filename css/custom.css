@@ -7,3 +7,32 @@ div a img:hover {
 a:hover{
   text-decoration: none;
 }
+a{
+  height:600px;
+  width:600px;
+}
+img{
+    zoom: .8;  //increase if you have very small images
+}
+h1{
+  text-align: center;
+}
+p{
+  text-align: center;
+}
+.wrapper {
+    text-align: center;
+}
+body{
+  background-color: #152D1D;
+}
+.container{
+  background-color: white;
+}
+#space{
+  width:750px;
+  height: 1000px;
+}
+.row-eq-height{
+   margin-top:20px;
+}
