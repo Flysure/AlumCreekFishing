@@ -23,8 +23,12 @@ p{
 .wrapper {
     text-align: center;
 }
+.searchbar{
+  text-align: center;
+}
 body{
-  background-color: #152D1D;
+  background-color: black;
+
 }
 .container{
   background-color: white;
@@ -35,4 +39,23 @@ body{
 }
 .row-eq-height{
    margin-top:20px;
+}
+input[type=text] {
+    height:30px;
+    width: 130px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+    -webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;
+}
+
+/* When the input field gets focus, change its width to 100% */
+input[type=text]:focus {
+    height:30px;
+    width: 50%;
+}
+.jumbotron{
+  margin:0px;
+  padding:20px;
 }

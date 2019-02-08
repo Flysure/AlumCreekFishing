@@ -2,8 +2,13 @@
   margin-top: 25px;
 }
 body{
-  background-color: #152D1D;
+  background-color: black;
 }
 .container{
   background-color: white;
+}
+.img-responsive {
+  max-height: 100%;
+height: auto;
+width: auto;
 }

@@ -1,4 +1,5 @@
 <html>
+
 <head>
   <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="css/custom.css">
@@ -9,11 +10,13 @@
 </head>
 
 <body>
-
-
+<div id="outer" class="container">
 
 
   <div class="container">
+    <nav class="navbar navbar-inverse bg-inverse">
+<a class="navbar-brand" href="../index.html">Home</a>
+</nav>
     <div class="jumbotron">
       <h1>Alum Creek Fishing</h1>
       <p> <i> One stop information collection on fish in Ohio's Alum Creek State Park</i></p>
@@ -21,117 +24,140 @@
 
 
     <div class="wrapper">
-      <button class="btn btn-default btn-lg" data-toggle='collapse' data-target='#demo'>Begin</button>
-
+      <button class="btn btn-default btn-lg" data-toggle='collapse' data-target='#demo'>Start Searching</button>
     </div>
 
-
-    <br>
-    <br>
     <div class="row-eq-height">
       <div id='demo' class='collapse'>
-        <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
-          <a href='fish/channel_catfish.html'><p>channel catfish</p>
-          <img src="fish/pics/channel_catfish.jpg" class="img-responsive" />
+        <div class="searchbar">
+
+          <input id="numb" type="text" name="search" placeholder="Search.." onkeyup="myFunction()">
+
+          <br><br>
+
+          <script>
+            function myFunction() {
+              var x, text;
+              var array = ["crappie", "smallmouth", "largemouth", "bluecat", "perch", "rockbass", "channelcatfish", "flathead", "muskie", "carp", "Saugeye", "spotted", "Bluegill"];
+              // Get the value of the input field with id="numb"
+              x = document.getElementById("numb").value;
+
+              if (x.length != 0) {
+                for (fish in array) {
+                  var query = x.toUpperCase();
+
+                  if (array[fish].toUpperCase().indexOf(query) == -1) {
+                    console.log(array[fish] + " index is -1");
+                    var fish = document.getElementById(String(array[fish]));
+                    fish.setAttribute("hidden", true);
+                  } else {
+                    console.log(array[fish] + " index is contained");
+
+                    var fish = document.getElementById(String(array[fish]));
+                    fish.removeAttribute("hidden");
+                  }
+                }
+              } else {
+                for (fish in array) {
+                  var fish = document.getElementById(String(array[fish]));
+
+                  fish.removeAttribute("hidden");
+                }
+              }
+            }
+          </script>
+        </div>
+        <div id="channelcatfish" class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+          <a href='fish/channel_catfish.html'>
+            <p>Channel Catfish</p>
+            <img src="fish/pics/channel_catfish.jpg" class="img-responsive" />
           </a>
         </div>
 
-        <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
-          <a href='fish/bluegill.html'><p>Bluegill</p>
+        <div id="Bluegill" class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+          <a href='fish/Bluegill.html'>
+            <p>Bluegill</p>
             <img src="fish/pics/bluegill.jpg" id="picture1" class="img-responsive" />
-            </a>
+          </a>
 
         </div>
-        <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
-          <a href='fish/saugeye.html'><p>Saugeye</p>
-          <img src="fish/pics/saugeye.jpg" class="img-responsive" />
+        <div id="Saugeye" class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+          <a href='fish/saugeye.html'>
+            <p>Saugeye</p>
+            <img src="fish/pics/saugeye.jpg" class="img-responsive" />
           </a>
         </div>
-        <div class="clearfix">
 
+        <div id="largemouth" class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+          <a href='fish/largemouth.html'>
+            <p>Largemouth</p>
+            <img src="fish/pics/largemouth.jpg" class="img-responsive" />
+          </a>
         </div>
 
-
-        <div class="row-eq-height">
-          <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
-            <a href='fish/largemouth.html'><p>largemouth</p>
-          <img src="fish/pics/largemouth.jpg" class="img-responsive" />
+        <div id="smallmouth" class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+          <a href='fish/smallmouth.html'>
+            <p>Smallmouth</p>
+            <img src="fish/pics/smallmouth.jpg" class="img-responsive" />
           </a>
-          </div>
-
-          <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
-            <a href='fish/smallmouth.html'><p>smallmouth</p>
-          <img src="fish/pics/smallmouth.jpg" class="img-responsive" />
-          </a>
-          </div>
-          <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
-            <a href='fish/crappie.html'><p>crappie</p>
-          <img src="fish/pics/crappie.jpg" class="img-responsive" />
-          </a>
-          </div>
         </div>
-        <div class="clearfix">
-
-        </div>
-        <div class="row-eq-height">
-          <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
-            <a href='fish/flathead.html'><p>flathead</p>
-          <img src="fish/pics/flathead.jpg" class="img-responsive" />
+        <div id="crappie" class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+          <a href='fish/crappie.html'>
+            <p>Crappie</p>
+            <img src="fish/pics/crappie.jpg" class="img-responsive" />
           </a>
-          </div>
-
-          <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
-            <a href='fish/muskie.html'><p>muskie</p>
-          <img src="fish/pics/muskie.jpg" class="img-responsive" />
-          </a>
-          </div>
-          <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
-            <a href='fish/spotted.html'><p>spotted</p>
-          <img src="fish/pics/spotted.jpg" class="img-responsive" />
-          </a>
-          </div>
         </div>
-        <div class="clearfix">
 
+        <div id="flathead" class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+          <a href='fish/flathead.html'>
+            <p>Flathead</p>
+            <img src="fish/pics/flathead.jpg" class="img-responsive" />
+          </a>
         </div>
-        <div class="row-eq-height">
 
-          <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
-            <a href='fish/Perch.html'>perch
+        <div id="muskie" class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+          <a href='fish/muskie.html'>
+            <p>Muskie</p>
+            <img src="fish/pics/muskie.jpg" class="img-responsive" />
+          </a>
+        </div>
+        <div id="spotted" class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+          <a href='fish/spotted.html'>
+            <p>Spotted</p>
+            <img src="fish/pics/spotted.jpg" class="img-responsive" />
+          </a>
+        </div>
+
+        <div id="perch" class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+          <a href='fish/Perch.html'>Perch
           <img src="fish/pics/perch.jpg" class="img-responsive" />
           </a>
-          </div>
+        </div>
 
-          <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
-            <a href='fish/rockbass.html'>rockbass
+        <div id="rockbass" class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+          <a href='fish/rockbass.html'>Rockbass
           <img src="fish/pics/rockbass.jpg" class="img-responsive" />
           </a>
-          </div>
-          <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
-            <a href='fish/BlueCatfish.html'>Blue Catfish
+        </div>
+        <div id="bluecat" class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+          <a href='fish/BlueCatfish.html'>Blue Catfish
           <img src="fish/pics/BlueCatfish.jpg" class="img-responsive" />
           </a>
-          </div>
         </div>
-        <div class="row-eq-height">
-          <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
-            <a href='fish/carp.html'>carp
+
+        <div id="carp" class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+          <a href='fish/carp.html'>Carp
           <img src="fish/pics/carp.jpg" class="img-responsive" />
           </a>
-          </div>
-
         </div>
 
       </div>
 
     </div>
-    <div class="container" id="space">
-
-    </div>
 
 
 
-
+</div>
 </body>
 </div>
 

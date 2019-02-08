@@ -76,26 +76,11 @@ for fish in array:
 
     <body>
 
-      <br>
+      
       <div class='container'>
-      <nav class="navbar navbar-default">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-    </button>
-        <a class="navbar-brand" href="../index.html">AlumCreek Fishing</a>
-      </div>
-      <div class="collapse navbar-collapse" id="myNavbar">
-        <ul class="nav navbar-nav">
-          <li class="active"><a href="../index.html">Home</a></li>
-        </ul>
-
-      </div>
-    </div>
-  </nav>
+     <nav class="navbar navbar-inverse bg-inverse">
+<a class="navbar-brand" href="../index.html">Home</a>
+</nav>
         <div class='row'>
           <div class='col-lg-6 col-md-6 col-sm-6 col-xs-12'>
             <h3><i>"""+ str(fish['sciname']) +"""</i></h3>
@@ -181,7 +166,7 @@ At a glance</a>
         <div id="collapse3" class="panel-collapse collapse">
           <div class="panel-body">
             <ul class='list-group'>
-             
+
               <li class='list-group-item'>Shore vs Boat <span class='badge'>"""+fish['shoreboat']+"""</span></li>
               <li class='list-group-item'>School <span class='badge'>"""+fish['school']+"""</span></li>
               <li class='list-group-item'>Best time of day <span class='badge'>"""+fish['time']+"""</span></li>
