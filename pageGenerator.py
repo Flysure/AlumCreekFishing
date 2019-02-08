@@ -57,7 +57,7 @@ spottedbass = {'id':'spotted','weight':'2lbs-6 lb.','length':'10in-24 in.','comn
 array = [crappie,smallmouth,largemouth,bluecat,perch,rock,channelcatfish,flatheadcatfish,muskellunge,carp,saugeye,spottedbass]
 
 for fish in array:
-    name = '/Users/AndrewsMacBookAir/Desktop/AlumCreekFishing/fish/' + str(fish['id']) + '.html'
+    name = '/Users/AndrewsMacBookAir/Desktop/Workspace/AlumCreekFishing/fish/' + str(fish['id']) + '.html'
     file = open(name,'w',encoding='utf-8')
     file.write(
     """ <html><head><link rel='stylesheet' href='../css/bootstrap.css'>
@@ -76,10 +76,10 @@ for fish in array:
 
     <body>
 
-      
+
       <div class='container'>
      <nav class="navbar navbar-inverse bg-inverse">
-<a class="navbar-brand" href="../index.html">Home</a>
+<a class="navbar-brand" href="../home.html">Home</a>
 </nav>
         <div class='row'>
           <div class='col-lg-6 col-md-6 col-sm-6 col-xs-12'>
